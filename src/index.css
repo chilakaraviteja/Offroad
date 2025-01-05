@@ -1,3 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .list-items {
+    @apply hover:border-b-4 hover:border-blue-500 p-4;
+  }
+  .cards {
+    @apply w-[100%] md:px-24 py-3 font-semibold text-center border-black border-2;
+  }
+  .ix1-banner {
+    @apply data-[status=x1]:bg-sectionMobileBannerImg data-[status=x1]:md:bg-sectionDesktopBannerImg;
+  }
+  .i4-banner {
+    @apply data-[status=i4]:bg-mobileBannerImg data-[status=i4]:md:bg-bannerImg;
+  }
+  .i4-banner-content {
+    @apply group-data-[status=i4]:absolute group-data-[status=i4]:bottom-12;
+  }
+  .cars {
+    @apply data-[status=cars]:bg-carsBannerMobileImg data-[status=cars]:md:bg-carsBannerImg  data-[status=cars]:pt-16;
+  }
+}
